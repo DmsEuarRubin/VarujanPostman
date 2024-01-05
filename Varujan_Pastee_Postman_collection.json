@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "0670aa17-9816-4216-be3f-a08cbbd60331",
+		"name": "My Pastee collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31710073"
+	},
+	"item": [
+		{
+			"name": "My get request (ID info)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}{{PasteeID}}",
+					"host": [
+						"{{BaseURL}}{{PasteeID}}"
+					],
+					"query": [
+						{
+							"key": "X-Auth-Token",
+							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
+							"description": "I love Rick and Morty",
+							"disabled": true
+						},
+						{
+							"key": "1",
+							"value": "aUJTCTpSgWQfi34hIwkvPb9EfmZb09dk2X7dOIbZi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My post request (Create)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"pm.environment.set(\"PasteeID\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const dateNow = Date.now();\r",
+							"const titleDate = `I love Rick And Morty ${dateNow} times.`;\r",
+							"\r",
+							"pm.environment.set('Title', titleDate);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"encrypted\": false, \r\n\"description\":\"ILOVE RICK AND MORTY\",\r\n\"sections\":\r\n[{\r\n\"name\":\"{{Title}}\",\r\n\"syntax\":\"autodetect\",\r\n\"contents\":\"I AM PICKLE RIIIIIIIICKKKKKK!!!\"\r\n}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}",
+					"host": [
+						"{{BaseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My patch request (Update)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"encrypted\": false,\r\n  \"description\":\"Rick And Morty\",\r\n  \"sections\":\r\n[\r\n    {\"name\":\"PICKLE RIIIIICK!\",\r\n    \"syntax\":\"autodetect\",\r\n    \"contents\":\"ILOVE RICK AND MORTYYYYY\"}\r\n    ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}{{PasteeID}}",
+					"host": [
+						"{{BaseURL}}{{PasteeID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Delete request (Remove)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Auth-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}{{PasteeID}}",
+					"host": [
+						"{{BaseURL}}{{PasteeID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "ID",
+			"value": "887I7"
+		}
+	]
+}
