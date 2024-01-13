@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "451ab5f2-8742-4117-9321-88c1a889b054",
+		"_postman_id": "510bdcb8-7514-4ad6-bc0f-c8035ba777d3",
 		"name": "My Pastee collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31710073"
@@ -27,22 +27,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseURL}}{{PasteeID}}",
+					"raw": "{{BaseURL}}/{{PasteeID}}",
 					"host": [
-						"{{BaseURL}}{{PasteeID}}"
+						"{{BaseURL}}"
 					],
-					"query": [
-						{
-							"key": "X-Auth-Token",
-							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
-							"description": "I love Rick and Morty",
-							"disabled": true
-						},
-						{
-							"key": "1",
-							"value": "aUJTCTpSgWQfi34hIwkvPb9EfmZb09dk2X7dOIbZi",
-							"disabled": true
-						}
+					"path": [
+						"{{PasteeID}}"
 					]
 				}
 			},
@@ -131,9 +121,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BaseURL}}{{PasteeID}}",
+					"raw": "{{BaseURL}}/{{PasteeID}}",
 					"host": [
-						"{{BaseURL}}{{PasteeID}}"
+						"{{BaseURL}}"
+					],
+					"path": [
+						"{{PasteeID}}"
 					]
 				}
 			},
@@ -144,6 +137,10 @@
 		{
 			"key": "ID",
 			"value": "887I7"
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://api.paste.ee/v1/pastes"
 		}
 	]
 }
