@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0670aa17-9816-4216-be3f-a08cbbd60331",
+		"_postman_id": "451ab5f2-8742-4117-9321-88c1a889b054",
 		"name": "My Pastee collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31710073"
@@ -105,44 +105,6 @@
 					"raw": "{{BaseURL}}",
 					"host": [
 						"{{BaseURL}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "My patch request (Update)",
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "uY6LfmIzguX6DZ7hVfSwkQbAVedsjvzs41DcJAuHq",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "X-Auth-Token",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": " {\"encrypted\": false,\r\n  \"description\":\"Rick And Morty\",\r\n  \"sections\":\r\n[\r\n    {\"name\":\"PICKLE RIIIIICK!\",\r\n    \"syntax\":\"autodetect\",\r\n    \"contents\":\"ILOVE RICK AND MORTYYYYY\"}\r\n    ]\r\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BaseURL}}{{PasteeID}}",
-					"host": [
-						"{{BaseURL}}{{PasteeID}}"
 					]
 				}
 			},
