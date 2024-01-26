@@ -27,12 +27,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseURL}}/{{PasteeID}}",
+					"raw": "{{baseURL}}/{{pasteeID}}",
 					"host": [
-						"{{BaseURL}}"
+						"{{baseURL}}"
 					],
 					"path": [
-						"{{PasteeID}}"
+						"{{pasteeID}}"
 					]
 				}
 			},
@@ -92,9 +92,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseURL}}",
+					"raw": "{{baseURL}}",
 					"host": [
-						"{{BaseURL}}"
+						"{{baseURL}}"
 					]
 				}
 			},
@@ -121,12 +121,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BaseURL}}/{{PasteeID}}",
+					"raw": "{{baseURL}}/{{pasteeID}}",
 					"host": [
-						"{{BaseURL}}"
+						"{{baseURL}}"
 					],
 					"path": [
-						"{{PasteeID}}"
+						"{{pasteeID}}"
 					]
 				}
 			},
@@ -135,11 +135,7 @@
 	],
 	"variable": [
 		{
-			"key": "ID",
-			"value": "887I7"
-		},
-		{
-			"key": "BaseURL",
+			"key": "baseURL",
 			"value": "https://api.paste.ee/v1/pastes"
 		}
 	]
